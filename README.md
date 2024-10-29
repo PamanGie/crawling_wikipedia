@@ -85,19 +85,34 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ## Troubleshooting
 
-### Common Issues
+## Common Issues
 
 1. **Rate Limiting**
-   - The crawler includes a delay between requests
-   - Increase `time.sleep()` if you encounter rate limiting
+   * Default delay is 2 seconds between requests 
+   * If encountering rate limiting, increase `self.delay` in `__init__`:
+     ```python
+     self.delay = 4  # Increase from 2 to 4 seconds
+     ```
 
-2. **Memory Issues**
-   - Adjust chunk size in training script
-   - Process fewer articles at once
+2. **Article Quality**
+   * Articles are filtered based on:
+     - Minimum 100 words
+     - Minimum 2 sections
+     - Word diversity ratio > 0.3
+   * Adjust thresholds in `_verify_article_quality` method if needed
 
-3. **Encoding Issues**
-   - The crawler uses UTF-8 encoding
-   - Check your file system encoding if you see strange characters
+3. **Failed Articles**
+   * Check `crawling_progress.txt` for list of failed topics
+   * Common reasons for failure:
+     - Disambiguation pages
+     - No matching Wikipedia article
+     - Article doesn't meet quality criteria
+   * Progress is saved continuously, so you can retry failed articles
+
+4. **Logging**
+   * All activities are logged to `crawler.log`
+   * Real-time progress in `crawling_progress.txt`
+   * Use `--debug` flag for more detailed logging
 
 ## License
 
