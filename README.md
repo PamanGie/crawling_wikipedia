@@ -69,7 +69,6 @@ trainer.train(output_dir="./cloud_model")
 
 ```
 ├── wikipedia_crawler.py     # Main crawler implementation
-├── cloud_model_trainer.py   # GPT-2 training script
 ├── requirements.txt        # Project dependencies
 └── README.md              # This file
 ```
