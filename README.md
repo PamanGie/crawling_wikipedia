@@ -126,3 +126,6 @@ The training script generates:
 - Loss curves
 - Perplexity metrics
 - Evaluation result
+
+### Screenshot
+![Description of Image](https://i.postimg.cc/q79pcyxv/i-Screen-Shoter-Any-Desk-241030061019.jpg)
