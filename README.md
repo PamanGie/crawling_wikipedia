@@ -14,7 +14,7 @@ A Python tool to crawl Wikipedia articles and format them into a structured data
 ## Requirements
 
 ```bash
-pip install wikipedia>=1.4.0 beautifulsoup4>=4.9.3 transformers>=4.30.0 torch>=2.0.0 numpy>=1.21.0 matplotlib>=3.4.0
+pip install wikipedia>=1.4.0
 ```
 
 ## Usage
