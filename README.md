@@ -14,7 +14,7 @@ A Python tool to crawl Wikipedia articles and format them into a structured data
 ## Requirements
 
 ```bash
-pip install wikipedia-api
+pip install wikipedia
 ```
 
 ## Usage
